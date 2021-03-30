@@ -1,0 +1,11 @@
+[writtenBy]
+other = "Written by"
+
+[on]
+other = "on"
+
+[generator]
+other = "Made with <a href='https://gohugo.io'>Hugo</a> and <a href='https://orgmode.org'>Org</a> using the <a href='https://github.com/brongulus/tufte-hugo'>Tufte</a> theme."
+
+[publishdate]
+other = "{{ .PublishDate.Format \"January 2, 2006\" }}"
