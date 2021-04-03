@@ -75,13 +75,33 @@ blockquote {
     padding: 0 5rem 0 1.25rem;
   }
 }
-
+// Fix filter to change whites in png to match blog bg
 img {
   display: block;
   margin: 0 0 1rem;
   max-width: 100%;
+  -webkit-filter: invert(7%) sepia(22%) saturate(405%) hue-rotate(340deg) brightness(102%) contrast(97%);
 }
 
 td {
   vertical-align: top;
+}
+// Custom Scrollbar
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d5c4a1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }

@@ -2,8 +2,10 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
     {{ partial "head.html" . }}
     <body>
+    <div class="container custom-scrollbar">
         {{ partial "header.html" . }}
         {{ block "main" . }}{{ end }}
         {{ partial "footer.html" . }}
+    </div>
     </body>
 </html>
