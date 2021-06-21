@@ -1,18 +1,40 @@
+:root {
+  // --light-bg: #fbf1c7;
+  --light-bg: #c9c9c9;
+  --dark-bg: #2E3440;
+  --light-font: #555;
+  --dark-font: #e1e1ff;
+  --bg: var(--light-bg);
+  --txt: var(--light-font);
+  --light-link: #458588;
+  --dark-link: #88C0D0;
+  --link: var(--light-link);
+}
+
 * {
   @include box-sizing;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 html,
-body {
-  color: $default-color;
-  background-color: #fbf1c7;
+.content {
+  color: var(--txt);
+  background-color: var(--bg);
   margin-left: auto;
   margin-right: auto;
   // padding-left: 12.5%;
   max-width: 1400px;
-  
+  transition: background 0.3s ease;
 }
+
+// [data-theme="dark"] {
+//     --primary-color: #9A97F3;
+//     --secondary-color: #818cab;
+//     --font-color: #e1e1ff;
+//     --bg-color: #202945;
+//     --heading-color: #818cab;
+// }
 
 html {
   font-family: $serif-primary;
@@ -30,6 +52,7 @@ body {
 
 h1 {
   // font-weight: 400;
+  color: var(--txt);
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: 3.2rem;
@@ -38,6 +61,7 @@ h1 {
 
 h2 {
   // font-style: italic;
+  color: var(--txt);
   font-weight: 400;
   margin-top: 2.1rem;
   margin-bottom: 1.4rem;
@@ -51,13 +75,13 @@ h3 {
 h4,
 h5,
 h6 {
-  color: $default-shade;
+  // color: $default-shade;
   font-family: $sans-serif;
   line-height: normal;
 }
 
 a {
-  color: $blue;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -80,7 +104,7 @@ img {
   display: block;
   margin: 0 0 1rem;
   max-width: 100%;
-  -webkit-filter: invert(7%) sepia(22%) saturate(405%) hue-rotate(340deg) brightness(102%) contrast(97%);
+  filter: invert(7%) sepia(22%) saturate(405%) hue-rotate(340deg) brightness(102%) contrast(97%);
 }
 
 td {
@@ -104,4 +128,77 @@ td {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
+}
+// Dark Mode toggle
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  position: relative;
+  background: var(--txt);
+  border-radius: 5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  width: 5rem;
+  font-size: 1.5rem;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.label .ball {
+  position: absolute;
+  background-color: var(--bg);
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  height: 2rem;
+  width: 2rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+// .image {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// .image .fab {
+//   position: absolute;
+//   font-size: clamp(10rem, 80vw, 80vh);
+//   transition: opacity 0.3s ease-in-out 0.5s;
+// }
+
+.checkbox:checked + .content .label .ball {
+  transform: translateX(2.5rem);
+}
+
+.checkbox:checked + .content {
+  --bg: var(--dark-bg);
+  --txt: var(--dark-font);
+}
+
+.checkbox:checked + a {
+  --link: var(--dark-link);
+}
+
+.checkbox:checked + h1 h2 {
+--txt: var(--dark-font);
+}
+
+.fa-galactic-republic {
+  color: var(--dark-font);
+}
+
+.fa-rebel {
+  color: var(--light-font);
 }
