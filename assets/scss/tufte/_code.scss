@@ -4,7 +4,7 @@ code {
 }
 
 code {
-  background-color: #fbf1c7;
+  background-color: var(--bg);
   border-radius: 0px;
   color: $code-color;
   font-size: 85%;
@@ -24,8 +24,8 @@ pre code {
 }
 
 .highlight {
-  background-color: #fbf1c7;
-  border-radius: 0px;
+  background-color: #272822;
+  border-radius: .5rem;
   line-height: 1.4;
   margin: 0 0 1rem;
   padding: 1rem;

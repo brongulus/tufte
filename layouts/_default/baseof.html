@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-    <input type="checkbox" class="checkbox" id="check" />
+    <input type="checkbox" class="checkbox" id="check"/>
     <div class="content">
-        <label class="label" for="check">
-            <i class="fab fa-galactic-republic"></i>
-            <i class="fab fa-rebel"></i>
             <!-- <i class="h1"></i> -->
             <!-- <i class="a"></i> -->
             <!-- <i class="h2"></i> -->
-        <div class="ball"></div>
         {{ partial "head.html" . }}
-    </label>
         <body>
         <div class="container custom-scrollbar">
             {{ partial "header.html" . }}
             {{ block "main" . }}{{ end }}
             {{ partial "footer.html" . }}
         </div>
+    </div>
         </body>
 </html>

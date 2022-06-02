@@ -1,7 +1,7 @@
 .catalogue {
   &-item {
     border-bottom: 1px solid $grey-2;
-    color: $default-color;
+    color: var(--txt);
     display: block;
     padding: 2rem 0;
 
@@ -22,7 +22,7 @@
   }
 
   &-title {
-    color: $default-shade;
+    color: var(--txt);
     display: block;
     font-family: $sans-serif;
     font-size: 2rem;

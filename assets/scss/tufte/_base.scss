@@ -1,12 +1,15 @@
 :root {
   --light-bg: #fbf1c7;
   // --light-bg: #c9c9c9;
-  --light-bg: #ebe4e1;
+  // --light-bg: #ebe4e1;
   --dark-bg: #323f46;
   --light-font: #555;
   --dark-font: #c9cdd7;
+  --light-scroll: #555;
+  --dark-scroll: #000;
   --bg: var(--light-bg);
   --txt: var(--light-font);
+  --scroll: var(--light-scroll);
   --light-link: #458588;
   --dark-link: #88C0D0;
   --link: var(--light-link);
@@ -25,7 +28,7 @@ html,
   margin-left: auto;
   margin-right: auto;
   // padding-left: 12.5%;
-  max-width: 1400px;
+  // max-width: 1400px;
   transition: background 0.3s ease;
 }
 
@@ -122,7 +125,8 @@ td {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d5c4a1;
+  // background-color: #d5c4a1;
+  background-color: var(--scroll);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
@@ -137,15 +141,16 @@ td {
 }
 
 .label {
-  display: flex;
+  display: inline-block;
   align-items: right;
   justify-content: space-between;
   position: relative;
   background: var(--txt);
   border-radius: 5rem;
   padding: 0.5rem;
-  height: 2.5rem;
-  width: 5rem;
+  margin: 1rem 0 0 8rem;
+  height: 2rem;
+  width: 4rem;
   font-size: 1.5rem;
   transition: background 0.5s ease;
   cursor: pointer;
@@ -158,8 +163,8 @@ td {
   border-radius: 50%;
   top: 0.25rem;
   left: 0.25rem;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   transform: translateX(0);
   transition: transform 0.3s ease, background-color 0.5s ease;
 }
@@ -181,7 +186,8 @@ td {
 // }
 
 .checkbox:checked + .content .label .ball {
-  transform: translateX(2.5rem);
+  display: inline-block;
+  transform: translateX(2rem);
 }
 
 .checkbox:checked + .content {
