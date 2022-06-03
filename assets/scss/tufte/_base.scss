@@ -123,7 +123,7 @@ blockquote {
 img {
   display: block;
   margin: 0 0 1rem;
-  filter: var(--filter);
+  // filter: var(--filter);
   mix-blend-mode: var(--blend);
   max-width: 100%;
   // filter: invert(7%) sepia(22%) saturate(405%) hue-rotate(340deg)
