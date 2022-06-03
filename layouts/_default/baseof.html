@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-    <input type="checkbox" class="checkbox" id="check"/>
-    <div class="content">
-            <!-- <i class="h1"></i> -->
-            <!-- <i class="a"></i> -->
-            <!-- <i class="h2"></i> -->
-        {{ partial "head.html" . }}
-        <body>
-        <div class="container custom-scrollbar">
-            {{ partial "header.html" . }}
-            {{ block "main" . }}{{ end }}
-            {{ partial "footer.html" . }}
+    <!-- <body> -->
+        <input type="checkbox" class="checkbox" id="check"/>
+        <div class="content">
+            <body>
+            <div class="container custom-scrollbar">
+                {{ partial "head.html" . }}
+                {{ partial "header.html" . }}
+                {{ block "main" . }}{{ end }}
+                {{ partial "footer.html" . }}
+            </div>
+            </body>
         </div>
-    </div>
-        </body>
+    <!-- </body> -->
 </html>
