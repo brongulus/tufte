@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-    <!-- <body> -->
+    <body>
         <input type="checkbox" class="checkbox" id="check"/>
         <div class="content">
-            <body>
-            <div class="container custom-scrollbar">
+            <div class="custom-scrollbar">
+                <div class = "container">
                 {{ partial "head.html" . }}
                 {{ partial "header.html" . }}
                 {{ block "main" . }}{{ end }}
                 {{ partial "footer.html" . }}
+                </div>
             </div>
-            </body>
         </div>
-    <!-- </body> -->
+    </body>
 </html>

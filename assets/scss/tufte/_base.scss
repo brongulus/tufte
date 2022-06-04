@@ -3,12 +3,12 @@
   --light-bg: #e1e1ff;
   --dark-bg: #323f46;
   // --dark-bg: #180030;
+  --bg: var(--light-bg);
   --light-font: #555;
   --dark-font: #c9cdd7;
+  --txt: var(--light-font);
   --light-scroll: #555;
   --dark-scroll: #fff;
-  --bg: var(--light-bg);
-  --txt: var(--light-font);
   --scroll: var(--light-scroll);
   --light-link: #458588;
   --dark-link: #88c0d0;
@@ -66,11 +66,18 @@ html {
 
 body {
   margin: 0;
+  overflow: hidden;
   -webkit-text-size-adjust: 100%;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 80%;
+  transition: background 0.3s ease;
+}
+
 h1 {
-  // font-weight: 400;
   color: var(--txt);
   margin-top: 4rem;
   margin-bottom: 1.5rem;
@@ -79,9 +86,8 @@ h1 {
 }
 
 h2 {
-  // font-style: italic;
+  font-style: bold;
   color: var(--txt);
-  font-weight: 400;
   margin-top: 2.1rem;
   margin-bottom: 1.4rem;
   font-size: 2.2rem;
@@ -106,8 +112,8 @@ a {
 }
 
 blockquote {
-  border-left: 0.25rem solid $grey-2;
-  color: $grey-1;
+  border-left: 0.25rem solid var(--txt);
+  color: var(--txt);
   margin: 0.8rem 0;
   padding: 0.5rem 1rem;
 
@@ -133,29 +139,41 @@ img {
 td {
   vertical-align: top;
 }
-// Custom Scrollbar
 
-::-webkit-scrollbar {
+// ----------------
+// Custom Scrollbar
+// ----------------
+.custom-scrollbar {
+  display: block;
+  overflow: auto;
+  height: 100vh;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
   background-color: transparent;
   width: 20px;
 }
 
-::-webkit-scrollbar-track {
-  background-color: var(--bg);
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   // background-color: #d5c4a1;
-  background-color: var(--scroll);
+  background: var(--scroll);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
+
+// ----------------
 // Dark Mode toggle
+// ----------------
+
 .checkbox {
   display: none;
 }
@@ -170,7 +188,7 @@ td {
   padding: 0.5rem;
   margin: 1rem 0 0 1rem;
   height: 2rem;
-  width: 4rem;
+  width: 2rem;
   font-size: 1.5rem;
   transition: background 0.5s ease;
   cursor: pointer;
@@ -181,40 +199,26 @@ td {
   position: absolute;
   background-color: var(--bg);
   border-radius: 50%;
+
   top: 0.25rem;
   left: 0.25rem;
   height: 1.5rem;
-  width: 1.5rem;
-  transform: translateX(0);
-  transition: transform 0.3s ease, background-color 0.5s ease;
-}
+  width: 0.75rem;
+  border-radius: 0.75rem 0 0 0.75rem;
 
-// .image {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-// .image .fab {
-//   position: absolute;
-//   font-size: clamp(10rem, 80vw, 80vh);
-//   transition: opacity 0.3s ease-in-out 0.5s;
-// }
+  transition: transform 0.4s ease, background-color 0.5s ease;
+}
 
 .checkbox:checked + .content .label .ball {
   display: inline-block;
-  transform: translateX(2rem);
+  transform: translateX(0.75rem) rotate(180deg);
 }
 
 .checkbox:checked + .content {
   --bg: var(--dark-bg);
   --txt: var(--dark-font);
   --link: var(--dark-link);
-  --scroll: var(--light-scroll);
+  --scroll: var(--dark-scroll);
   --gradient: var(--dark-gradient);
   --blend: var(--dark-blend);
   --filter: var(--dark-filter);
