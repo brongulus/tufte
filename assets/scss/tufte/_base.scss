@@ -1,28 +1,34 @@
 :root {
   // --light-bg: #fbf1c7;
-  --light-bg: #e1e1ff;
-  --dark-bg: #323f46;
   // --dark-bg: #180030;
-  --bg: var(--light-bg);
-  --light-font: #555;
-  --dark-font: #c9cdd7;
-  --txt: var(--light-font);
-  --light-scroll: #555;
-  --dark-scroll: #fff;
-  --scroll: var(--light-scroll);
-  --light-link: #458588;
-  --dark-link: #88c0d0;
-  --link: var(--light-link);
+  // --bg: var(--light-bg);
+  // --font: var(--light-font);
+  // --scroll: var(--light-scroll);
+  // --link: var(--light-link);
 
-  --dark-gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
-  --light-gradient: linear-gradient(-120deg, #9a97f3 0%, #202945 100%);
-  --gradient: var(--light-gradient);
-  --light-blend: darken;
-  --dark-blend: overlay;
-  --blend: var(--light-blend);
-  --light-filter: invert(0%);
-  --dark-filter: invert(100%);
-  --filter: var(--light-filter);
+  // --gradient: var(--light-gradient);
+  // --blend: var(--light-blend);
+  // --filter: var(--light-filter);
+}
+
+.theme-light {
+  --filter: invert(0%);
+  --blend: darken;
+  --gradient: linear-gradient(-120deg, #9a97f3 0%, #202945 100%);
+  --link: #458588;
+  --scroll: #555;
+  --font: #555;
+  --bg: #e1e1ff;
+}
+
+.theme-dark {
+  --bg: #323f46;
+  --link: #88c0d0;
+  --font: #c9cdd7;
+  --scroll: #fff;
+  --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+  --blend: overlay;
+  --filter: invert(100%);
 }
 
 * {
@@ -34,7 +40,7 @@
 html,
 .content {
   display: block;
-  color: var(--txt);
+  color: var(--font);
   background-color: var(--bg);
   // margin-left: auto;
   // margin-right: auto;
@@ -78,7 +84,7 @@ body {
 }
 
 h1 {
-  color: var(--txt);
+  color: var(--font);
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: 3.2rem;
@@ -87,7 +93,7 @@ h1 {
 
 h2 {
   font-style: bold;
-  color: var(--txt);
+  color: var(--font);
   margin-top: 2.1rem;
   margin-bottom: 1.4rem;
   font-size: 2.2rem;
@@ -112,8 +118,8 @@ a {
 }
 
 blockquote {
-  border-left: 0.25rem solid var(--txt);
-  color: var(--txt);
+  border-left: 0.25rem solid var(--font);
+  color: var(--font);
   margin: 0.8rem 0;
   padding: 0.5rem 1rem;
 
@@ -183,7 +189,7 @@ td {
   align-items: right;
   justify-content: space-between;
   position: relative;
-  background: var(--txt);
+  background: var(--font);
   border-radius: 5rem;
   padding: 0.5rem;
   margin: 1rem 0 0 1rem;
@@ -214,15 +220,15 @@ td {
   transform: translateX(0.75rem) rotate(180deg);
 }
 
-.checkbox:checked + .content {
-  --bg: var(--dark-bg);
-  --txt: var(--dark-font);
-  --link: var(--dark-link);
-  --scroll: var(--dark-scroll);
-  --gradient: var(--dark-gradient);
-  --blend: var(--dark-blend);
-  --filter: var(--dark-filter);
-}
+// .checkbox:checked + .content {
+//   --bg: var(--dark-bg);
+//   --font: var(--dark-font);
+//   --link: var(--dark-link);
+//   --scroll: var(--dark-scroll);
+//   --gradient: var(--dark-gradient);
+//   --blend: var(--dark-blend);
+//   --filter: var(--dark-filter);
+// }
 
 .fa-galactic-republic {
   color: var(--dark-font);

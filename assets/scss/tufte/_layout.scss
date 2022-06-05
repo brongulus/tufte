@@ -19,7 +19,7 @@ footer,
 
   &-title {
     @include transition(all 0.2s ease-out);
-    // color: var(--txt);
+    // color: var(--font);
     display: inline-block;
     margin: 0;
     padding-right: 0.2rem;
@@ -84,7 +84,7 @@ footer {
   text-align: center;
 
   span {
-    color: var(--txt);
+    color: var(--font);
     font-size: 0.8rem;
   }
 }
