@@ -1,17 +1,17 @@
+// :root {
+//   // --light-bg: #fbf1c7;
+//   // --dark-bg: #180030;
+//   // --bg: var(--light-bg);
+//   // --font: var(--light-font);
+//   // --scroll: var(--light-scroll);
+//   // --link: var(--light-link);
+
+//   // --gradient: var(--light-gradient);
+//   // --blend: var(--light-blend);
+//   // --filter: var(--light-filter);
+// }
+
 :root {
-  // --light-bg: #fbf1c7;
-  // --dark-bg: #180030;
-  // --bg: var(--light-bg);
-  // --font: var(--light-font);
-  // --scroll: var(--light-scroll);
-  // --link: var(--light-link);
-
-  // --gradient: var(--light-gradient);
-  // --blend: var(--light-blend);
-  // --filter: var(--light-filter);
-}
-
-.theme-light {
   --filter: invert(0%);
   --blend: darken;
   --gradient: linear-gradient(-120deg, #9a97f3 0%, #202945 100%);
@@ -21,7 +21,7 @@
   --bg: #e1e1ff;
 }
 
-.theme-dark {
+[data-theme="dark"] {
   --bg: #323f46;
   --link: #88c0d0;
   --font: #c9cdd7;
