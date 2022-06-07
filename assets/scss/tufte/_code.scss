@@ -4,7 +4,6 @@ code {
 }
 
 code {
-  // background-color: var(--bg);
   border-radius: 0px;
   color: $code-color;
   font-size: 85%;
@@ -21,8 +20,7 @@ pre {
 }
 
 pre code {
-  // background: var(--bg);
-  color: inherit;
+  color: var(--font);
   font-size: 100%;
   padding: 0.1rem;
 }
