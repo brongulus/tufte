@@ -14,7 +14,7 @@ footer,
   &-container {
     margin: 1rem auto;
     position: relative;
-    text-align: center;
+    text-align: left;
   }
 
   &-title {
@@ -29,6 +29,9 @@ footer,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    @media only screen and (max-width: 600px) {
+      font-size: 2.2rem;
+    }
     &:hover,
     &:focus {
       opacity: 0.6;
