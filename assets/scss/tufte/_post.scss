@@ -14,8 +14,9 @@
 
   &-title {
     color: var(--font);
-    font-family: $sans-serif;
-    font-size: 4rem;
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-size: 4.5rem;
     margin: 1rem 0;
     text-align: center;
   }
@@ -28,6 +29,7 @@
   }
 
   p {
+    font-family: "FreightSansPro", sans;
     margin: 0 0 1rem;
     text-align: justify;
   }

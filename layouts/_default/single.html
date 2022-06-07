@@ -2,8 +2,9 @@
 
 <main>
 	<div class="post">
-		{{ partial "single/post-info.html" . }}
 		{{ partial "single/title.html" . }}
+		{{ partial "single/post-info.html" . }}
+		<br><div class="post-line"></div>
 
 		{{ partial "single/header.html" . }}
 
@@ -21,7 +22,7 @@
 		{{- end }}
 
 		<!-- FIXME -->
-		<a href="#" class="top">Top</a>
+		<a href="https://brongulus.github.io" class="home">Home</a>
 	</div>
 </main>
 

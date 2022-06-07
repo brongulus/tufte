@@ -10,7 +10,7 @@
     font-size: 1.1rem;
   }
 
-  .top {
+  .home {
     @include transition(all 0.3s ease-out);
     color: var(--font);
     font-family: $sans-serif;

@@ -1,20 +1,59 @@
 :root {
   --filter: invert(0%);
   --blend: darken;
-  --gradient: linear-gradient(-120deg, #9a97f3 0%, #202945 100%);
+  --gradient: radial-gradient(
+    ellipse at right,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 70%
+  );
+  // --gradient: radial-gradient(
+  //     circle farthest-corner at 35% 90%,
+  //     #9a97f3,
+  //     transparent 50%
+  //   ),
+  //   radial-gradient(circle farthest-corner at 0 140%, #893dc2, transparent 50%),
+  //   radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+  //   radial-gradient(
+  //     ellipse farthest-corner at 20% -50%,
+  //     #5258cf,
+  //     transparent 50%
+  //   ),
+  //   radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+  //   radial-gradient(
+  //     ellipse farthest-corner at 60% -20%,
+  //     #893dc2,
+  //     transparent 50%
+  //   ),
+  //   radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+  //   linear-gradient(
+  //     #6559ca,
+  //     #bc318f 30%,
+  //     #e33f5f 50%,
+  //     #f77638 70%,
+  //     #fec66d 100%
+  //   );
   --link: #458588;
   --scroll: #555;
   --font: #555;
-  --bg: #e1e1ff;
+  --bg: radial-gradient(
+      ellipse at bottom left,
+      rgba(242, 206, 222, 0.57) 0%,
+      #ebe4e1 35%
+    ),
+    radial-gradient(ellipse at top left, #f2cede, transparent 30%);
+  --bg-sel: #ebe4e1;
 }
 
 [data-theme="dark"] {
-  --bg: #323f46;
+  // --bg: linear-gradient(-180deg, #0e001c 0%, #08000d 100%);
+  --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+  --bg-sel: #0e001c;
+  // --bg: #323f46;
   --link: #88c0d0;
   --font: #c9cdd7;
   --scroll: #fff;
   --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
-  --blend: overlay;
+  --blend: lighten;
   --filter: invert(100%);
 }
 
@@ -24,11 +63,39 @@
   box-sizing: border-box;
 }
 
+//-----------
+// Fonts
+//-----------
+
+@font-face {
+  font-family: "FreightSansPro";
+  src: url(https://github.com/brongulus/tufte/tree/master/static/fonts/FreightSansProLight-Regular.woff2)
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 300;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 200;
+  font-display: fallback;
+}
+
+//-----------
+// Content
+//-----------
+
 html,
 .content {
   display: block;
   color: var(--font);
-  background-color: var(--bg);
+  background: var(--bg);
   // margin-left: auto;
   // margin-right: auto;
   margin: 0;
@@ -41,11 +108,11 @@ html,
 html {
   color: var(--bg);
   font-family: $sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   overflow-y: scroll;
   margin: 0;
   @media (min-width: 600px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -57,29 +124,31 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 800px;
-  width: 80%;
+  max-width: 1000px;
+  width: 90%;
   transition: background 0.3s ease;
 }
 
 h1 {
   color: var(--font);
+  // font-family: "Cormorant", serif;
+  font-weight: normal;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: 3.2rem;
   line-height: 1;
 }
-
 h2 {
-  font-style: bold;
+  font-family: "Josefin Sans", sans-serif;
   color: var(--font);
   margin-top: 2.1rem;
   margin-bottom: 1.4rem;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 1;
 }
 h3 {
-  font-family: $sans-serif;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
 }
 h4,
@@ -91,7 +160,6 @@ h6 {
 }
 
 a {
-  font-family: $sans-serif; //temp test
   color: var(--link);
   text-decoration: none;
 }
@@ -110,20 +178,25 @@ blockquote {
     padding: 0 5rem 0 1.25rem;
   }
 }
-// Fix filter to change whites in png to match blog bg
+
 img {
   display: block;
+  // border-radius: 10px;
   margin: 0 0 1rem;
-  // filter: var(--filter);
+  filter: var(--filter);
   mix-blend-mode: var(--blend);
   max-width: 100%;
-  // filter: invert(7%) sepia(22%) saturate(405%) hue-rotate(340deg)
-  // brightness(102%) contrast(97%);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
-// img.zoomTarget:hover {
-//   cursor: default !important;
-// }
+figcaption {
+  font-style: italic;
+  color: #aaa;
+}
 
 td {
   vertical-align: top;
@@ -131,12 +204,12 @@ td {
 
 ::-moz-selection {
   /* Code for Firefox */
-  color: var(--bg);
+  color: var(--bg-sel);
   background: var(--font);
 }
 
 ::selection {
-  color: var(--bg);
+  color: var(--bg-sel);
   background: var(--font);
 }
 
@@ -204,7 +277,7 @@ td {
 
 .label .ball {
   position: absolute;
-  background-color: var(--bg);
+  background: var(--bg);
   border-radius: 50%;
 
   top: 0.25rem;

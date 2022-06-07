@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
 <head>
-  <script>
-  // Render blocking JS:
-  if (localStorage.theme) document.documentElement.setAttribute("data-theme", localStorage.theme);
-  </script>
+    <!-- Load Relevant Fonts -->
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://github.com/brongulus/tufte/tree/master/static/fonts/FreightSansProLight-Regular.woff2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300&family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <script>
+        // Render blocking JS:
+        if (localStorage.theme) document.documentElement.setAttribute("data-theme", localStorage.theme);
+    </script>
 </head>
 <body>
     <div id ="dark-mode-button">
