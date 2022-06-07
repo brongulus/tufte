@@ -35,12 +35,13 @@
   --link: #458588;
   --scroll: #555;
   --font: #555;
-  --bg: radial-gradient(
-      ellipse at bottom left,
-      rgba(242, 206, 222, 0.57) 0%,
-      #ebe4e1 35%
-    ),
-    radial-gradient(ellipse at top left, #f2cede, transparent 30%);
+  --bg: #ebe4e1;
+  // --bg: radial-gradient(
+  //     ellipse at bottom left,
+  //     rgba(242, 206, 222, 0.57) 0%,
+  //     #ebe4e1 35%
+  //   ),
+  //   radial-gradient(ellipse at top left, #f2cede, transparent 30%);
   --bg-sel: #ebe4e1;
 }
 
@@ -86,7 +87,16 @@
   font-weight: 200;
   font-display: fallback;
 }
-
+@font-face {
+  font-family: "Roboto Mono";
+  font-weight: 300;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-display: fallback;
+}
 //-----------
 // Content
 //-----------
