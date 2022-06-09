@@ -1,11 +1,12 @@
 :root {
   --filter: invert(0%);
   --blend: darken;
-  --gradient: radial-gradient(
-    ellipse at right,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 70%
-  );
+  --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
+  // --gradient: radial-gradient(
+  //   ellipse at right,
+  //   rgba(238, 174, 202, 1) 0%,
+  //   rgba(148, 187, 233, 1) 70%
+  // );
   --link: #458588;
   --scroll: #555;
   --font: #555;
@@ -13,8 +14,19 @@
   --bg-sel: #ebe4e1;
 }
 
+@media (prefers-color-scheme: dark) {
+  --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+  --bg-sel: #0e001c;
+  // --bg: #323f46;
+  --link: #88c0d0;
+  --font: #c9cdd7;
+  --scroll: #fff;
+  --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+  --blend: lighten;
+  --filter: invert(100%);
+}
+
 [data-theme="dark"] {
-  // --bg: linear-gradient(-180deg, #0e001c 0%, #08000d 100%);
   --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
   --bg-sel: #0e001c;
   // --bg: #323f46;
@@ -37,14 +49,6 @@
 //-----------
 
 @font-face {
-  font-family: "FreightSansPro";
-  src: url(https://github.com/brongulus/tufte/tree/master/static/fonts/FreightSansProLight-Regular.woff2)
-    format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
-}
-@font-face {
   font-family: "Cormorant";
   font-weight: 300;
   font-style: italic;
@@ -63,6 +67,16 @@
 @font-face {
   font-family: "Inter";
   font-weight: 300;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 900;
   font-display: fallback;
 }
 //-----------
@@ -109,7 +123,6 @@ body {
 
 h1 {
   color: var(--font);
-  // font-family: "Cormorant", serif;
   font-weight: normal;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
@@ -238,8 +251,8 @@ td {
   position: fixed;
   left: auto;
   bottom: auto;
-  right: 3vw;
-  top: 1.5rem;
+  right: 2.5vw;
+  top: 1.2rem;
 
   background: var(--font);
   border-radius: 5rem;
@@ -252,8 +265,14 @@ td {
   cursor: pointer;
   z-index: 1;
 
+  @media only screen and (max-width: 850px) {
+    transform: scale(0.92);
+    top: 0.5rem;
+  }
+
   @media only screen and (max-width: 600px) {
-    transform: scale(0.8);
+    transform: scale(0.85);
+    top: 0.1rem;
   }
 }
 
@@ -268,9 +287,6 @@ td {
   width: 0.75rem;
   border-radius: 0.75rem 0 0 0.75rem;
 
-  @media only screen and (max-width: 600px) {
-    transform: scale(0.8);
-  }
   transition: transform 0.4s ease, background-color 0.5s ease;
 }
 

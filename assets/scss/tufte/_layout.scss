@@ -19,19 +19,25 @@ footer,
 
   &-title {
     @include transition(all 0.2s ease-out);
-    // color: var(--font);
     display: inline-block;
-    font-style: bold;
+    font-style: "Inter", sans serif;
+    font-weight: 600;
     margin: 0;
     padding-right: 0.2rem;
+    font-size: 2.8rem;
 
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @media only screen and (max-width: 600px) {
-      font-size: 2.2rem;
+    @media only screen and (max-width: 850px) {
+      font-size: 2rem;
     }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+
     &:hover,
     &:focus {
       opacity: 0.6;
