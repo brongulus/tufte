@@ -103,7 +103,7 @@ html {
   font-size: 22px;
   overflow-y: scroll;
   margin: 0;
-  @media (max-width: 600px) {
+  @media (max-width: 625px) {
     font-size: 18px;
   }
 }
@@ -270,7 +270,7 @@ td {
     top: 0.5rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 625px) {
     transform: scale(0.85);
     top: 0.1rem;
   }
