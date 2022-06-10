@@ -1,3 +1,18 @@
+@media (prefers-color-scheme: light) {
+  --filter: invert(0%);
+  --blend: darken;
+  --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
+  // --gradient: radial-gradient(
+  //   ellipse at right,
+  //   rgba(238, 174, 202, 1) 0%,
+  //   rgba(148, 187, 233, 1) 70%
+  // );
+  --link: #458588;
+  --scroll: #555;
+  --font: #555;
+  --bg: linear-gradient(90deg, #ebe4e1 0%, #ebe4e1 100%);
+  --bg-sel: #ebe4e1;
+}
 :root {
   --filter: invert(0%);
   --blend: darken;
@@ -189,10 +204,6 @@ figcaption {
   color: #aaa;
 }
 
-td {
-  vertical-align: top;
-}
-
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--bg-sel);
@@ -204,6 +215,55 @@ td {
   background: var(--font);
 }
 
+//-------------
+// Tables
+// ------------
+thead {
+  // font-style: italic;
+  // text-transform: uppercase;
+  background-color: var(--font);
+  color: var(--bg-sel);
+  font-size: 1.15rem;
+  letter-spacing: 2%;
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: var(--font);
+    background: var(--bg-sel);
+  }
+
+  ::selection {
+    color: var(--font);
+    background: var(--bg-sel);
+  }
+}
+td {
+  vertical-align: top;
+  text-align: center;
+  padding: 0 10px;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+  padding-bottom: 20px;
+}
+th,
+td {
+  border: 1px solid var(--font);
+}
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
 // ----------------
 // Custom Scrollbar
 // ----------------
