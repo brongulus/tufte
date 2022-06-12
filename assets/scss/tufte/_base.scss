@@ -1,18 +1,6 @@
-@media (prefers-color-scheme: light) {
-  --filter: invert(0%);
-  --blend: darken;
-  --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
-  // --gradient: radial-gradient(
-  //   ellipse at right,
-  //   rgba(238, 174, 202, 1) 0%,
-  //   rgba(148, 187, 233, 1) 70%
-  // );
-  --link: #458588;
-  --scroll: #555;
-  --font: #555;
-  --bg: linear-gradient(90deg, #ebe4e1 0%, #ebe4e1 100%);
-  --bg-sel: #ebe4e1;
-}
+//-----------
+// Colours
+//-----------
 :root {
   --filter: invert(0%);
   --blend: darken;
@@ -29,16 +17,36 @@
   --bg-sel: #ebe4e1;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --filter: invert(0%);
+    --blend: darken;
+    --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
+    // --gradient: radial-gradient(
+    //   ellipse at right,
+    //   rgba(238, 174, 202, 1) 0%,
+    //   rgba(148, 187, 233, 1) 70%
+    // );
+    --link: #458588;
+    --scroll: #555;
+    --font: #555;
+    --bg: linear-gradient(90deg, #ebe4e1 0%, #ebe4e1 100%);
+    --bg-sel: #ebe4e1;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
-  --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
-  --bg-sel: #0e001c;
-  // --bg: #323f46;
-  --link: #88c0d0;
-  --font: #c9cdd7;
-  --scroll: #fff;
-  --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
-  --blend: lighten;
-  --filter: invert(100%);
+  :root {
+    --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+    --bg-sel: #0e001c;
+    // --bg: #323f46;
+    --link: #88c0d0;
+    --font: #c9cdd7;
+    --scroll: #fff;
+    --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+    --blend: lighten;
+    --filter: invert(100%);
+  }
 }
 
 [data-theme="dark"] {
@@ -51,6 +59,22 @@
   --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
   --blend: lighten;
   --filter: invert(100%);
+}
+
+[data-theme="light"] {
+  --filter: invert(0%);
+  --blend: darken;
+  --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
+  // --gradient: radial-gradient(
+  //   ellipse at right,
+  //   rgba(238, 174, 202, 1) 0%,
+  //   rgba(148, 187, 233, 1) 70%
+  // );
+  --link: #458588;
+  --scroll: #555;
+  --font: #555;
+  --bg: linear-gradient(90deg, #ebe4e1 0%, #ebe4e1 100%);
+  --bg-sel: #ebe4e1;
 }
 
 * {
@@ -195,7 +219,7 @@ img {
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    opacity: 0.8;
   }
 }
 

@@ -53,10 +53,15 @@ footer,
 
   li {
     @include transition(all 0.2s ease-out);
-    color: $default-color;
+    // color: $default-color;
     display: inline-block;
     opacity: 0.6;
-    padding: 0 2rem 0 0;
+    padding: 0 1.5rem 0 0;
+    font-style: "Inter", sans serif;
+    font-weight: 400;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     &:last-child {
       padding-right: 0;

@@ -5,6 +5,15 @@
 						<h1 class="nav-title"><b>{{ .Site.Title }}</b></h1>
 					</div>
 				</a>
+				<li>
+            <a href="{{ "/notes/" | relURL }}">Notes</a>
+				</li>
+				<li>
+            <a href="{{ "/blog/" | relURL }}">Blog</a>
+				</li>
+				<li>
+            <a href="{{ "/about/about" | relURL }}">About</a>
+				</li>
 				{{ partial "header-menu.html" . }}
 			</div>
 		</nav>
