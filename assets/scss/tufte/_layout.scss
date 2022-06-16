@@ -38,6 +38,10 @@ footer,
       font-size: 1.6rem;
     }
 
+    @media only screen and (max-width: 398px) {
+      font-size: 1.3rem;
+    }
+
     &:hover,
     &:focus {
       opacity: 0.6;
@@ -56,12 +60,16 @@ footer,
     // color: $default-color;
     display: inline-block;
     opacity: 0.6;
-    padding: 0 1.5rem 0 0;
+    padding: 0 1.2rem 0 0;
     font-style: "Inter", sans serif;
     font-weight: 400;
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media only screen and (max-width: 425px) {
+      padding: 0 0.9rem 0 0;
+    }
 
     &:last-child {
       padding-right: 0;
@@ -101,5 +109,64 @@ footer {
   span {
     color: var(--font);
     font-size: 0.8rem;
+  }
+}
+
+// FIXME
+.toc + #TableOfContents {
+  @media (min-width: 1450px) {
+    position: fixed;
+    left: auto;
+    bottom: auto;
+    right: 3.5vw;
+    top: 6.5rem;
+    font-size: 1.2rem;
+    // display: none;
+  }
+
+  display: block;
+  background: transparent;
+  padding-bottom: 0.8em;
+  font-size: 1.6rem;
+
+  ol {
+    display: list-item;
+    padding-left: 0;
+
+    &:not(:first-child) {
+      display: list-item;
+      font-style: italic;
+      padding-left: 1.4rem;
+      font-size: 90%;
+    }
+  }
+
+  ul {
+    // list-style-type: none;
+    display: list-item;
+    padding-left: 0;
+
+    &:not(:first-child) {
+      display: list-item;
+      font-style: italic;
+      padding-left: 1.4rem;
+      font-size: 90%;
+    }
+  }
+
+  li {
+    display: inherit;
+    color: var(--font);
+
+    a {
+      color: inherit;
+      text-align: left;
+      padding: 0;
+
+      &:hover {
+        // color: $highlight-color;
+        background-color: transparent;
+      }
+    }
   }
 }

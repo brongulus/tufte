@@ -4,7 +4,6 @@
 :root {
   --filter: invert(0%);
   --blend: darken;
-  --inv-gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
   --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
   // --gradient: radial-gradient(
   //   ellipse at right,
@@ -22,7 +21,6 @@
     --filter: invert(0%);
     --blend: darken;
     --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
-    --inv-gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
     // --gradient: radial-gradient(
     //   ellipse at right,
     //   rgba(238, 174, 202, 1) 0%,
@@ -39,7 +37,6 @@
   :root {
     --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
     --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
-    --inv-gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
     --bg-sel: #0e001c;
     // --bg: #323f46;
     --link: #88c0d0;
@@ -57,7 +54,6 @@
   --font: #c9cdd7;
   --scroll: #fff;
   --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
-  --inv-gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
   --blend: lighten;
   --filter: invert(100%);
 }
@@ -65,7 +61,6 @@
   --filter: invert(0%);
   --blend: darken;
   --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
-  --inv-gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
   // --gradient: radial-gradient(
   //   ellipse at right,
   //   rgba(238, 174, 202, 1) 0%,
@@ -81,6 +76,7 @@
   @include box-sizing;
   line-height: 1.5;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 //-----------
@@ -148,6 +144,7 @@ html {
   color: var(--bg);
   font-family: $sans-serif;
   font-size: 22px;
+  overflow: scroll;
   overflow-y: hidden;
   overflow-x: hidden;
   margin: 0;
@@ -162,7 +159,6 @@ body {
 }
 .container {
   margin: 0 auto;
-  overflow: scroll;
   max-width: 1000px;
   width: 90%;
   transition: background 0.3s ease;

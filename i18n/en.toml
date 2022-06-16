@@ -9,3 +9,6 @@ other = "Made with <a href='https://gohugo.io'>Hugo</a> and <a href='https://org
 
 [publishdate]
 other = "{{ .PublishDate.Format \"January 2, 2006\" }}"
+
+[tableOfContents]
+other = "Table of Contents"

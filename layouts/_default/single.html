@@ -8,6 +8,14 @@
 
 		{{ partial "single/header.html" . }}
 
+		{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+		<!-- FIXME -->
+		<div class="toc">
+			<h2>Table of Contents</h2> <br>{{ .TableOfContents }}
+		</aside>
+		</div>
+		{{ end }}
+
 		{{ .Content }}
 
 		{{ partial "single/footer.html" . }}
