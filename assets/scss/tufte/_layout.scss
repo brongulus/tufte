@@ -13,7 +13,7 @@ footer,
 
   &-container {
     margin: 1rem auto;
-    position: relative;
+    position: sticky;
     text-align: left;
   }
 
@@ -53,6 +53,14 @@ footer,
     margin: 1rem 0 0;
     padding: 0;
     text-align: center;
+    // Rougier
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
   }
 
   li {
@@ -112,61 +120,116 @@ footer {
   }
 }
 
-// FIXME
-.toc + #TableOfContents {
-  @media (min-width: 1450px) {
-    position: fixed;
-    left: auto;
-    bottom: auto;
-    right: 3.5vw;
-    top: 6.5rem;
-    font-size: 1.2rem;
-    // display: none;
+// Courtesy of Nicholas Rougier
+#TableOfContents {
+  // TODO Show element only after heading has been scrolled?
+  @media (min-width: 1480px) {
+    // Tufte
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: sticky;
+    top: 1rem;
   }
 
-  display: block;
-  background: transparent;
-  padding-bottom: 0.8em;
-  font-size: 1.6rem;
-
-  ol {
-    display: list-item;
-    padding-left: 0;
-
-    &:not(:first-child) {
-      display: list-item;
-      font-style: italic;
-      padding-left: 1.4rem;
-      font-size: 90%;
-    }
-  }
-
-  ul {
-    // list-style-type: none;
-    display: list-item;
-    padding-left: 0;
-
-    &:not(:first-child) {
-      display: list-item;
-      font-style: italic;
-      padding-left: 1.4rem;
-      font-size: 90%;
-    }
-  }
-
-  li {
-    display: inherit;
+  @media (max-width: 700px) {
     color: var(--font);
+    font-size: 120%;
+  }
 
-    a {
-      color: inherit;
-      text-align: left;
-      padding: 0;
+  font-size: 1.2rem;
+  padding-top: 0em;
+  padding-left: 1em;
+  margin-top: 0em;
+  // text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
 
-      &:hover {
-        // color: $highlight-color;
-        background-color: transparent;
-      }
+  a {
+    &:hover {
+      color: var(--bg-sel);
+      background: var(--link);
+      text-decoration: none;
     }
   }
+}
+#TableOfContents:before {
+  content: "Table of Contents";
+  border-bottom: 1px solid var(--font);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  display: block;
+  font-size: 130%;
+  padding-top: 2em;
+  margin-top: -2em;
+  @media (max-width: 1480px) {
+    margin-left: -0.75em;
+  }
+  margin-left: -1em;
+  text-transform: capitalize;
+}
+#TableOfContents ul {
+  padding: 0;
+  font-weight: 400;
+  font-size: 87%;
+  list-style: none;
+  counter-reset: list 0;
+}
+#TableOfContents ul ul {
+  padding-left: 0em;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+  padding-left: 2em;
+}
+#TableOfContents h2:before {
+  content: "";
+  counter-reset: section;
+}
+#TableOfContents ul li {
+  vertical-align: top;
+  font-size: 95%;
+  display: inline-block;
+  width: 32%;
+
+  @media (min-width: 1480px) {
+    width: 100%;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+    font-size: 100%;
+  }
+}
+#TableOfContents ul li:before {
+  display: inline-block;
+  counter-increment: list;
+  content: counters(list, ".") ".";
+  width: 2em;
+  margin-left: -2em;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--link);
+}
+#TableOfContents ul li ul,
+#TableOfContents ul li ul li {
+  display: static;
+  width: 100%;
+  padding-left: 0;
+  line-height: 1.35em;
+  font-size: 95%;
+  text-transform: capitalize;
+  // font-family: "Josefin Sans", sans-serif;
+
+  @media (max-width: 700px) {
+    text-transform: uppercase;
+  }
+}
+#TableOfContents ul li ul li:before {
+  content: "";
 }

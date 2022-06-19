@@ -1,5 +1,5 @@
 .post {
-  padding: 3rem 0;
+  // padding: 1.5rem 0;
 
   &-info {
     color: $default-tint;
@@ -28,7 +28,8 @@
     color: var(--font);
     font-family: "Cormorant", serif;
     font-style: italic;
-    font-size: 4.5rem;
+    // font-size: 4.5rem;
+    font-size: 3.6rem;
     margin: 1rem 0;
     text-align: center;
   }
@@ -41,7 +42,7 @@
   }
 
   p {
-    font-family: "Inter", sans;
+    font-family: "Inter", sans-serif;
     margin: 0 0 1rem;
     text-align: justify;
   }

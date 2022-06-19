@@ -8,12 +8,8 @@
 
 		{{ partial "single/header.html" . }}
 
-		{{ if and (gt .WordCount 400 ) (.Params.toc) }}
-		<!-- FIXME -->
-		<div class="toc">
-			<h2>Table of Contents</h2> <br>{{ .TableOfContents }}
-		</aside>
-		</div>
+		{{ if and (gt .WordCount 600 )}}
+			{{ .TableOfContents }}
 		{{ end }}
 
 		{{ .Content }}
@@ -31,6 +27,11 @@
 
 		<a href="{{ "/" | relURL }}" class="home">Home</a>
 	</div>
+	<!-- Mathjax for latex rendering -->
+  <script async type="text/javascript"
+					src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+
 </main>
 
 {{ end }}
