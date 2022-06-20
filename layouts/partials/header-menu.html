@@ -1,12 +1,40 @@
-<ul>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
+<aside>
+    <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+                <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                    <a href="#">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+                <ul class="sub-menu">
+                    {{ range .Children }}
+                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ else }}
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+            {{ end }}
+        {{ end }}
         <li>
-            <a href="{{ .URL }}">
-                {{ .Pre }}
-                <span>{{ .Name }}</span>
-                {{ .Post }}
-            </a>
+            <!-- FIXME desc stuff -->
+            <a href="{{ "/index.xml" | relURL }}">RSS</a>
         </li>
-    {{ end }}
-</ul>
+        <li>
+            <div id="dark-mode-button">
+                <input type="checkbox" class="toggle" id="check"/>
+                <label for="check" class="themebox">
+                </label>
+            </div>
+        </li>
+    </ul>
+</aside>

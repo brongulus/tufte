@@ -5,29 +5,8 @@
 						<h1 class="nav-title"><b>{{ .Site.Title }}</b></h1>
 					</div>
 				</a>
-				<li>
-            <a href="{{ "/notes/" | relURL }}">Notes</a>
-				</li>
-				<li>
-            <a href="{{ "/blog/" | relURL }}">Blog</a>
-				</li>
-				<li>
-            <a href="{{ "/about/about" | relURL }}">About</a>
-				</li>
-				<!-- <li> -->
-				<!-- | -->
-				<!-- </li> -->
-				<li>
-					<div id="dark-mode-button">
-						<input type="checkbox" class="toggle" id="check"/>
-						<label for="check" class="themebox">
-						</label>
-					</div>
-				</li>
-				<li>
-							<!-- FIXME -->
-							<!-- <div class="toggle-icon"></div> -->
-				</li>
+
 				{{ partial "header-menu.html" . }}
+
 			</div>
 		</nav>
