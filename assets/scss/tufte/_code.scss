@@ -17,6 +17,49 @@ pre {
   margin: 0 0 1rem;
 }
 
+// *,
+// ::after,
+// ::before {
+//   box-sizing: border-box;
+// }
+
+pre code:before {
+  position: relative;
+  // position: sticky;
+  top: -2px;
+  left: -2px;
+  display: inline-flex;
+  padding: 0.25em 0.5em;
+  background: var(--gradient);
+  border-bottom-right-radius: 0.6rem;
+  // border-top-left-radius: 2px;
+  border: 0;
+  color: var(--bg-sel);
+  font-size: 80%;
+  font-weight: 600;
+}
+
+// TODO COPY block
+// pre.chroma:after {
+//   // content: "Copy";
+//   position: relative;
+//   top: 0;
+//   right: 0;
+//   border: 0;
+//   border-radius: 0 2px;
+//   padding: 0;
+//   font-family: "JetBrains Mono", monospace;
+//   font-weight: 800;
+//   font-size: 0.9em;
+//   line-height: 1.7;
+//   color: #fff;
+//   background-color: #8c8c8c;
+//   min-width: 60px;
+//   text-align: center;
+//   cursor: pointer;
+//   letter-spacing: 0em;
+// }
+
 pre code {
   color: var(--font);
   font-size: 100%;
@@ -27,6 +70,9 @@ pre code {
 // DONE
 .highlight {
   background: var(--gradient);
+  // &:hover {
+  // background: var(--font);
+  // }
   border-radius: 0.6rem;
   margin: 0 0 1rem;
   padding: 0.1rem;
@@ -47,4 +93,97 @@ pre code {
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
+}
+
+// Code blocks tag
+
+code.language-c:before {
+  content: "c";
+}
+code.language-cpp:before {
+  content: "C++";
+}
+code.language-clojure:before {
+  content: "clojure";
+}
+code.language-css:before {
+  content: "css";
+}
+code.language-elixir:before {
+  content: "elixir";
+}
+code.language-emacs-lisp:before {
+  content: "elisp";
+}
+code.language-erlang:before {
+  content: "erlang";
+}
+code.language-go:before {
+  content: "go";
+}
+code.language-haskell:before {
+  content: "haskell";
+}
+code.language-html:before {
+  content: "html";
+}
+code.language-idris:before {
+  content: "idris";
+}
+code.language-json:before {
+  content: "json";
+}
+code.language-java:before {
+  content: "java";
+}
+code.language-javascript:before {
+  content: "js";
+}
+code.language-julia:before {
+  content: "julia";
+}
+code.language-kotlin:before {
+  content: "kotlin";
+}
+code.language-latex:before {
+  content: "latex";
+}
+code.language-lua:before {
+  content: "lua";
+}
+code.language-markdown:before {
+  content: "md";
+}
+code.language-nix:before {
+  content: "nix";
+}
+code.language-org:before {
+  content: "org";
+}
+code.language-perl:before {
+  content: "perl";
+}
+code.language-php:before {
+  content: "php";
+}
+code.language-python:before {
+  content: "python";
+}
+code.language-racket:before {
+  content: "racket";
+}
+code.language-ruby:before {
+  content: "ruby";
+}
+code.language-rust:before {
+  content: "rust";
+}
+code.language-scheme:before {
+  content: "scheme";
+}
+code.language-sh:before {
+  content: "sh";
+}
+code.language-zig:before {
+  content: "zig";
 }
