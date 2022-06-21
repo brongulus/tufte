@@ -112,13 +112,13 @@
 }
 @font-face {
   font-family: "Source Serif Pro";
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-display: fallback;
 }
 @font-face {
   font-family: "Source Serif Pro";
-  font-weight: 200;
+  font-weight: 300;
   font-style: italic;
   font-display: fallback;
 }
@@ -151,7 +151,6 @@ html,
   height: 100%;
   // padding-left: 12.5%;
   // max-width: 1400px;
-  transition: background 0.3s ease;
 }
 html {
   color: var(--bg);
@@ -167,6 +166,9 @@ html {
 }
 body {
   margin: 0;
+  color: var(--font);
+  transition: background 0.5s ease-in-out, color 0.3s ease;
+  background: var(--bg);
   overflow: hidden;
   -webkit-text-size-adjust: 100%;
 }
@@ -180,8 +182,8 @@ body {
 
   margin: 0 auto;
   max-width: 1000px;
-  width: 90%;
-  transition: background 0.3s ease;
+  width: 95%;
+  transition: background 0.5s ease-in-out, color 0.3s ease;
 }
 h1 {
   color: var(--font);
@@ -246,7 +248,11 @@ img {
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    // opacity: 0.8;
+    // transform: scale(1.03);
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }
 figcaption {
@@ -387,6 +393,7 @@ tr:last-of-type td:last-of-type {
   // border-radius: 5px;
   // padding: 0 5px;
   color: var(--font);
+  transition: background 0.5s ease;
 }
 
 .themebox::after {
