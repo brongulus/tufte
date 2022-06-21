@@ -2,8 +2,8 @@
 
 <main>
 	<div class="post">
+		{{ partial "single/post-info.html" . }}
 		{{ partial "single/title.html" . }}
-		<!-- {{ partial "single/post-info.html" . }} -->
 		<!-- <div class="post-line"></div> -->
 
 		{{ partial "single/header.html" . }}
@@ -24,7 +24,7 @@
 		{{- if .NextPage }}
 		<a href="{{ .NextPage.RelPermalink }}" class="right arrow">&#8594;</a>
 		{{- end }}
-		<a href="#" class="home">Top</a>
+		<a href="#" class="bottom">Top</a>
 		<!-- <a href="{{ "/" | relURL }}" class="home">Home</a> -->
 	</div>
 	<!-- Mathjax for latex rendering -->

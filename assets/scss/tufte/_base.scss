@@ -8,6 +8,7 @@
   --filter: invert(0%);
   --blend: darken;
   --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
+  --gradient-sel: slateblue;
   // --gradient: radial-gradient(
   //   ellipse at right,
   //   rgba(238, 174, 202, 1) 0%,
@@ -35,6 +36,7 @@
     --bg-sel: #0e001c;
     // --bg: #323f46;
     --link: #88c0d0;
+    --gradient-sel: #64acff;
     --font: #c9cdd7;
     --scroll: #fff;
     --blend: lighten;
@@ -51,6 +53,7 @@
   --link: #88c0d0;
   --font: #c9cdd7;
   --scroll: #fff;
+  --gradient-sel: #64acff;
   --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
   --blend: lighten;
   --filter: invert(100%);
@@ -60,6 +63,7 @@
 [data-theme="light"] {
   --filter: invert(0%);
   --blend: darken;
+  --gradient-sel: slateblue;
   --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
   // --gradient: radial-gradient(
   //   ellipse at right,
@@ -93,6 +97,16 @@
 @font-face {
   font-family: "Josefin Sans";
   font-weight: 200;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
   font-display: fallback;
 }
 @font-face {
@@ -133,6 +147,11 @@
   font-weight: 500;
 }
 @font-face {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-display: fallback;
+}
+@font-face {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-display: fallback;
@@ -169,7 +188,7 @@ body {
   color: var(--font);
   transition: background 0.5s ease-in-out, color 0.3s ease;
   background: var(--bg);
-  overflow: hidden;
+  // overflow: hidden;
   -webkit-text-size-adjust: 100%;
 }
 .container {
@@ -197,14 +216,17 @@ h2 {
   font-family: "Josefin Sans", sans-serif;
   color: var(--font);
   margin-top: 2.1rem;
+  text-align: right;
+  border-bottom: 2px solid var(--font);
   margin-bottom: 1.4rem;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 1;
 }
 h3 {
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 h4,
 h5,
@@ -221,8 +243,8 @@ blockquote {
   display: block;
   margin-inline-end: 4rem;
 
-  border-bottom: 3px double var(--font);
-  border-top: 3px double var(--font);
+  border-bottom: 3px double #727272;
+  border-top: 3px double #727272;
 }
 // blockquote {
 //   border-left: 0.25rem solid var(--font);
@@ -388,12 +410,18 @@ tr:last-of-type td:last-of-type {
 }
 
 .themebox {
-  // display: inline-block;
-  // border: 2px solid var(--font);
+  display: inline-block;
+  // border: 1px solid var(--gradient-sel);
   // border-radius: 5px;
-  // padding: 0 5px;
+  padding: 0 5px;
+  // box-shadow: 0 2px 0 var(--gradient-sel);
   color: var(--font);
   transition: background 0.5s ease;
+
+  // &:active {
+  //   box-shadow: none;
+  //   transform: translateY(2px);
+  // }
 }
 
 .themebox::after {

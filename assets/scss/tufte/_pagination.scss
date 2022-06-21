@@ -10,10 +10,11 @@
     font-size: 1.1rem;
   }
 
-  .home {
+  .bottom {
     @include transition(all 0.3s ease-out);
-    color: var(--font);
-    font-family: $sans-serif;
+    color: #727272;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
     font-size: 1.1rem;
     opacity: 0.6;
 
