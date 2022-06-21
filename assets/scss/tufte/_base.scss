@@ -29,7 +29,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+    // --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+    --bg: radial-gradient(circle, #000 0%, #08000d 100%);
     --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
     --bg-sel: #0e001c;
     // --bg: #323f46;
@@ -43,7 +44,8 @@
   }
 }
 [data-theme="dark"] {
-  --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+  // --bg: radial-gradient(circle, #17002e 0%, #08000d 100%);
+  --bg: radial-gradient(circle, #000 0%, #08000d 100%);
   --bg-sel: #0e001c;
   // --bg: #323f46;
   --link: #88c0d0;
@@ -106,6 +108,12 @@
 @font-face {
   font-family: "Inter";
   font-weight: 700;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 200;
+  font-style: normal;
   font-display: fallback;
 }
 @font-face {
@@ -209,9 +217,6 @@ a {
 }
 blockquote {
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 4rem;
   margin-inline-end: 4rem;
 
   border-bottom: 3px double var(--font);

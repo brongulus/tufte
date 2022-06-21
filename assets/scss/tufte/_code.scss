@@ -5,7 +5,9 @@ code {
 
 code {
   border-radius: 0px;
-  color: $code-color;
+  // color: $code-color;
+  color: var(--font);
+  font-style: italic;
   font-size: 100%;
   overflow-x: auto;
 }
@@ -64,6 +66,7 @@ pre code:before {
 pre code {
   color: var(--font);
   font-size: 100%;
+  font-style: normal;
   // FIXME
   padding: 0.01rem;
 }
