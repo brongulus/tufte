@@ -105,6 +105,11 @@
   font-display: fallback;
 }
 @font-face {
+  font-family: "XCharter";
+  font-weight: 300;
+  font-display: fallback;
+}
+@font-face {
   font-family: "Open Sans";
   font-weight: 300;
   font-display: fallback;
@@ -122,6 +127,18 @@
 @font-face {
   font-family: "Inter";
   font-weight: 700;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-style: normal;
   font-display: fallback;
 }
 @font-face {
