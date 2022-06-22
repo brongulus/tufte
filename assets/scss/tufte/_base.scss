@@ -5,6 +5,7 @@
   --icon-moon-filter: invert(0);
   --icon-sun-filter: invert(1);
   --icon-filter: var(--icon-sun-filter);
+  --code: #e83e8c;
   --filter: invert(0%);
   --blend: darken;
   --gradient: linear-gradient(-70deg, #64acff 0%, slateblue 100%);
@@ -38,7 +39,8 @@
     --link: #88c0d0;
     --gradient-sel: #64acff;
     --font: #c9cdd7;
-    --scroll: #fff;
+    --code: #da578f;
+    --scroll: #c9cdd7;
     --blend: lighten;
     --filter: invert(100%);
     --button-icon: var(--icon-sun);
@@ -52,8 +54,9 @@
   // --bg: #323f46;
   --link: #88c0d0;
   --font: #c9cdd7;
-  --scroll: #fff;
+  --scroll: #c9cdd7;
   --gradient-sel: #64acff;
+  --code: #da578f;
   --gradient: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
   --blend: lighten;
   --filter: invert(100%);
@@ -72,6 +75,7 @@
   // );
   --link: #458588;
   --scroll: #555;
+  --color: #e83e8c;
   --font: #555;
   --button-icon: var(--icon-moon);
   --icon-filter: var(--icon-moon-filter);
@@ -368,7 +372,7 @@ tr:last-of-type td:last-of-type {
 }
 .custom-scrollbar::-webkit-scrollbar {
   background-color: transparent;
-  width: 20px;
+  width: 18px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: transparent;
