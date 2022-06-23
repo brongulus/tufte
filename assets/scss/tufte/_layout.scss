@@ -19,7 +19,11 @@ footer,
   &-title {
     @include transition(all 0.2s ease-out);
     display: inline-block;
-    font-style: "Inter", sans-serif;
+    font-style: "Inter";
+    a {
+      font-style: "Inter";
+    }
+
     font-weight: 600;
     margin: 0;
     padding-right: 0.2rem;

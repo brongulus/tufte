@@ -129,8 +129,8 @@
   font-display: fallback;
 }
 @font-face {
-  font-family: "Inter";
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   font-display: fallback;
 }
 @font-face {
@@ -175,6 +175,11 @@
 @font-face {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
   font-display: fallback;
 }
 //-----------
