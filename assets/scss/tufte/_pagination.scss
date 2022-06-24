@@ -1,31 +1,31 @@
 .pagination {
-  border-top: 0.5px solid $grey-2;
+  border-top: 0.5px solid var(--accent);
   font-family: $serif-secondary;
   padding-top: 2rem;
   position: relative;
   text-align: center;
 
   span {
-    color: var(--font);
+    color: var(--accent);
     font-size: 1.1rem;
   }
 
   .bottom {
     @include transition(all 0.3s ease-out);
-    color: #727272;
+    color: var(--accent);
     font-family: "Josefin Sans";
     text-transform: uppercase;
     font-size: 1.1rem;
-    opacity: 0.6;
+    opacity: 1;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.6;
     }
   }
 
   .arrow {
     @include transition(all 0.3s ease-out);
-    color: var(--font);
+    color: var(--accent);
     position: absolute;
 
     &:hover,

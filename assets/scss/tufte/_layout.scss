@@ -8,7 +8,7 @@ footer,
 }
 
 .nav {
-  box-shadow: 0 2px 2px -2px $shadow-color;
+  box-shadow: 0 2px 2px -2px var(--accent);
   overflow: auto;
 
   &-container {
@@ -149,7 +149,8 @@ footer {
 }
 #TableOfContents:before {
   content: "Table of Contents";
-  border-bottom: 1px solid var(--font);
+  color: var(--head);
+  border-bottom: 1px solid var(--accent);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   display: block;

@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #8897a0;
+}
+
+@media (min-width: 800px) {
+  header {
+    padding-right: 6%;
+    width: 30%;
+    min-height: 100vh;
+    position: fixed;
+    text-align: right;
+  }
+
+  header .inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header nav a {
+    display: block;
+  }
+
+  header h1 {
+    padding-top: 90px;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
+
+  main {
+    margin-left: calc(30% + 6%);
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 90px;
+  }
+
+  blockquote {
+    text-align: left;
+    margin-top: -0.55em; /* to adjust the top of the quote to the top of ny name */
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 2.5em;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-bottom: 1.25em;
+  }
+
+  header nav a {
+    padding: 0 1em;
+  }
+
+  main .inner {
+    padding: 0 20px; /* Medium uses 20px. */
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  blockquote {
+    text-align: left;
+  }
+}
+
+main {
+  padding-bottom: 1px;
+  height: 100%;
+}
+
+header {
+  background: #252525;
+  color: #fff;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+header h1 {
+  font: 30px/1 Concourse T7;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header nav a {
+  text-decoration: none;
+  font: 20px/1 Concourse T4;
+  color: #787878;
+  margin-bottom: 40px;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+header nav a:active {
+  color: #888;
+}
+
+header.photos nav a.photos,
+header.scribbles nav a.scribbles {
+  color: #fff;
+  font-weight: bold;
+}
+
+main .inner {
+  max-width: 650px;
+  min-width: 300px;
+}
+
+blockquote {
+  cursor: default;
+  line-height: 1.35;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+  margin-bottom: 2em;
+}
+
+blockquote {
+  font-family: "Equity Text A";
+  font-weight: bold;
+  font-size: 42px;
+}
+
+blockquote cite {
+  display: block;
+  font-weight: normal;
+  font-family: "Equity Text A";
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 1em;
+}
+
+.scribble article h1 a,
+header h1 a {
+  color: #fff;
+}
+article h1,
+article h1 a {
+  font-family: "Concourse T7";
+  font-size: 36px;
+  line-height: 1;
+}
+
+article h1 {
+  margin-bottom: 1.3em;
+}
+
+article h2,
+article h2 a {
+  font-family: "Concourse T6";
+  font-size: 30px;
+  font-weight: normal;
+}
+
+article h2 {
+  margin-bottom: 0.75em;
+}
+
+article .meta {
+  font-family: "Equity Caps A";
+  font-size: 14px;
+  margin-bottom: 1.25em;
+}
+
+article {
+  font-family: "Equity Text A";
+  font-size: 22px;
+}
+
+article p,
+article ol,
+article ul {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.35;
+  margin-bottom: 1.35em;
+}
+
+.photos blockquote {
+  color: #ff6666;
+}
+.scribbles blockquote {
+  color: #ff8181;
+}
+
+main.photos {
+  background: #ffd86a;
+}
+main.scribbles {
+  background: #5a536b;
+}
+main.scribbles {
+  background: #554e65;
+}
+
+.photos article .meta {
+  color: #654d0a;
+}
+.scribbles article .meta {
+  color: #a6a1b0;
+}
+
+.photos article {
+  color: #000;
+}
+.scribbles article {
+  color: #eee6ff;
+}
+
+.photos article h1,
+h2,
+h3 {
+  color: #000;
+}
+.scribbles article h1,
+.scribbles article h1 a,
+.scribbles article h2,
+.scribbles article h3 {
+  font-weight: normal;
+  color: #fff;
+}
+.scribbles article h1 a {
+  border-bottom-color: transparent;
+}
+
+.scribbles article em {
+  font-style: italic;
+  border-radius: 2px;
+}
+
+.scribbles article em {
+  color: #fff6ae;
+}
+
+.scribbles article a {
+  border-bottom-color: #857c9a;
+  color: #eee6ff;
+}
+
+.scribbles article a:hover,
+header h1 a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+article code {
+  /* Note: Designed for inline code, not blocks inside a <pre>. */
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0 2px 3px 2px;
+  font-size: 18px;
+}
+
+article pre code {
+  font-size: 16px;
+  tab-size: 2;
+}
+
+article a {
+  font-family: "Equity Text A";
+}
+a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+article a:active,
+header h1 a:active {
+  opacity: 0.5;
+}
+
+svg.block {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  overflow: visible;
+}
+
+article .meta time {
+  float: right;
+}
+
+article {
+  margin-bottom: 6.5em;
+}
+
+article:last-child {
+  margin-bottom: 10em;
+}
+
+.photos img {
+  max-width: calc(650px - 2 * 16px);
+  width: calc(100% - 2 * 16px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border: 16px solid #fff;
+  display: block;
+}
+
+.scribbles img {
+  max-width: calc(650px - 2 * 2px);
+  width: calc(100% - 2 * 2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border: 2px solid #6f6682;
+  display: block;
+}
+
+figcaption {
+  margin-top: 1em;
+  color: #654d0a;
+  font-style: italic;
+  font-size: 18px;
+}

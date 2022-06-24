@@ -15,16 +15,23 @@ code {
 // DONE
 pre {
   // border-left: 3px solid var(--font);
+  // border-radius: 0.25rem;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
   font-size: 16px;
-  border-radius: 0.25rem;
   margin: 0 0 1rem;
+  padding: 0.5rem;
 }
 
+// .chroma .line {
+//   display: flex;
+// }
+
 // Code blocks tag
-code[data-lang]::before {
-  content: attr(data-lang);
-  display: block;
-}
+// code[data-lang]::before {
+//   content: attr(data-lang);
+//   display: block;
+// }
 
 .highlight pre code:before {
   // FIXME
@@ -36,7 +43,7 @@ code[data-lang]::before {
   padding: 0.25em 0.5em;
   background: var(--font);
   border-bottom-right-radius: 0.25rem;
-  // border-top-left-radius: 2px;
+  border-top-left-radius: 0.25rem;
   border: 0;
   color: var(--bg-sel);
   font-size: 80%;
@@ -49,28 +56,29 @@ pre code {
   font-style: normal;
   margin-top: -1em;
   // FIXME
-  padding: 0.01rem;
+  // padding: 0.01rem;
 }
 
 // DONE
 .highlight {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   pre {
     margin-bottom: 0;
     // padding: 0 0.5em;
     overflow-x: auto;
+    // white-space: pre-wrap;
   }
 }
 
 ::-webkit-scrollbar {
   background-color: transparent;
-  width: 4px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scroll);
+  background: var(--accent);
   opacity: 0.6;
-  border-radius: 6px;
+  // border-radius: 6px;
   border: 5px solid transparent;
   background-clip: content-box;
 }
