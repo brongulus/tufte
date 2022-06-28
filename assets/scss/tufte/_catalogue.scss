@@ -1,9 +1,9 @@
 .catalogue {
   &-item {
-    border-bottom: 1px solid $grey-2;
+    border-bottom: 1px solid var(--accent);
     color: var(--font);
     display: block;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 
     &:hover .catalogue-line,
     &:focus .catalogue-line {
@@ -34,6 +34,10 @@
     font-size: 2rem;
     font-weight: 500;
     margin: 0.5rem 0;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   &-line {

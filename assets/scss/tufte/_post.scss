@@ -25,11 +25,19 @@
   }
 
   p code {
-    font-size: 90%;
+    font-size: 85%;
   }
 
   ul li code {
-    font-size: 90%;
+    font-size: 85%;
+  }
+
+  ol li code {
+    font-size: 85%;
+  }
+
+  ol li pre code {
+    font-size: 100%;
   }
 
   ul li pre code {
@@ -53,6 +61,33 @@
     padding: 0.5rem;
     text-align: center;
     quotes: none;
+  }
+
+  .note p {
+    border-left: 0.25rem solid var(--accent);
+    border-radius: 3px 6px 6px 3px;
+    color: var(--font);
+    font-style: italic;
+    background-color: var(--accent2);
+    margin: 0.8rem 0;
+    padding: 0.25rem 1rem;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 5rem 0 1rem;
+    }
+  }
+
+  .warning p {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--accent2);
+    color: var(--code);
+    margin: 0.8rem 0.5rem;
   }
 
   .epigraph p {
