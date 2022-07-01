@@ -1,4 +1,17 @@
 .post {
+  // p:first-child::first-letter {
+  //   color: hotpink;
+  //   padding: 0 0.3rem;
+  //   margin: 0 0.3rem 0 0;
+  //   border: 2px solid;
+  //   border-radius: 8px;
+  //   font-family: "IBM Plex Mono", monospace;
+
+  //   font-size: 4rem;
+  //   float: left;
+  //   line-height: 1;
+  // }
+
   &-info {
     color: $default-tint;
     font-family: $serif-secondary;
@@ -148,7 +161,7 @@
   }
 
   p {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Mulish", sans-serif;
     margin: 0 0 1rem;
     text-align: justify;
     hyphens: auto;
