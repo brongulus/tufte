@@ -1,5 +1,5 @@
-main,
 footer,
+main,
 .nav-container {
   display: block;
   margin: 0 auto;
@@ -90,15 +90,34 @@ footer,
 
 footer {
   font-family: $serif-secondary;
-  padding: 2rem 0;
   text-align: center;
-
+  padding: 2rem 0;
+  // FIXME
+  // padding-top: 5%;
+  // padding-bottom: 20%;
+  // display: block;
+  // position: sticky;
+  // // margin-bottom: 2rem;
+  // font-size: 1rem;
+  // transform-origin: bottom left;
+  // transform: rotate(-90deg);
+  // bottom: 1rem;
+  // left: 10vw;
+  // text-align: left;
   span {
     color: var(--font);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
-
+// footer::before {
+//   content: "";
+//   display: inline-block;
+//   vertical-align: middle;
+//   margin-right: 15px;
+//   height: 1px;
+//   width: 25px;
+//   background: #919795;
+// }
 // Courtesy of Nicholas Rougier
 #TableOfContents {
   // TODO Show element only after heading has been scrolled?

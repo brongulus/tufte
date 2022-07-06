@@ -222,6 +222,7 @@ table {
   margin-bottom: 1.5em;
   border-collapse: collapse;
   width: 95%;
+  margin-left: 0.75em;
 }
 table th {
   font-family: "Josefin Sans";
@@ -378,7 +379,7 @@ table tr + tr {
 //-----------
 // Fonts
 //-----------
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Mulish:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&Nanum+Myeongjo&Noto+Serif+KR:wght@300&family=Mulish:wght@300&family=Abril+Fatface&display=swap");
 @font-face {
   font-family: "Fira Sans";
   font-weight: 100;
@@ -386,7 +387,23 @@ table tr + tr {
 }
 @font-face {
   font-family: "Mulish", sans-serif;
-  weight: 300;
+  font-weight: 300;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Abril Fatface", serif;
+  font-display: fallback;
+  weight: 400;
+}
+@font-face {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 300;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-display: fallback;
 }
 
 @font-face {
