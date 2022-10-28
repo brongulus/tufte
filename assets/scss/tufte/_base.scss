@@ -15,6 +15,7 @@
   --code: #cd5555;
   --font: #252525;
   --head: #555;
+  --highlight: #edbd7766;
   --bg-sel: #ebe4e1;
   --bg: #ebe4e1;
   --icon-sun: url('data:image/svg+xml,\
@@ -38,6 +39,7 @@
     --code: #fff6ae;
     --font: #ffffff;
     --head: #f2f5f7;
+    --highlight: #617bff66;
     --blend: lighten;
     --accent: #a6a1b0;
     --accent2: hsl(210deg, 38%, 15%);
@@ -51,6 +53,7 @@
   // --bg: #554e65;
   --bg: #0e141b;
   --bg-sel: #0e001c;
+  --highlight: #617bff66;
   --link: #88c0d0;
   --font: #ffffff;
   --head: #f2f5f7;
@@ -76,6 +79,7 @@
   --accent: #a99f9a;
   --accent2: rgba(255, 135, 7, 0.17);
   --button-icon: var(--icon-moon);
+  --highlight: #edbd7766;
   --icon-filter: var(--icon-moon-filter);
   --bg: #ebe4e1;
   --bg-sel: #ebe4e1;
@@ -200,12 +204,14 @@ figcaption {
 }
 ::-moz-selection {
   /* Code for Firefox */
-  color: var(--bg-sel);
-  background: var(--font);
+  // color: var(--bg-sel);
+  // background: var(--font);
+  background: var(--highlight);
 }
 ::selection {
-  color: var(--bg-sel);
-  background: var(--font);
+  // color: var(--bg-sel);
+  background: var(--highlight);
+  // background: var(--font);
 }
 
 //-------------
@@ -379,7 +385,7 @@ table tr + tr {
 //-----------
 // Fonts
 //-----------
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&Nanum+Myeongjo&Noto+Serif+KR:wght@300&family=Mulish:wght@300&family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&Nanum+Myeongjo&Noto+Serif+KR:wght@200&family=Mulish:wght@300&family=Abril+Fatface&display=swap");
 @font-face {
   font-family: "Fira Sans";
   font-weight: 100;
@@ -397,7 +403,7 @@ table tr + tr {
 }
 @font-face {
   font-family: "Noto Serif KR", serif;
-  font-weight: 300;
+  font-weight: 200;
   font-display: fallback;
 }
 @font-face {
