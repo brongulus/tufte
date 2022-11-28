@@ -382,6 +382,10 @@ table tr + tr {
   transition: filter 300ms ease-in-out;
 }
 
+.katex {
+  font-size: 1em !important;
+}
+
 //-----------
 // Fonts
 //-----------
