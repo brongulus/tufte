@@ -13,6 +13,8 @@
 		{{ end }}
 
 		{{ .Content }}
+    <!-- {{ .Content | replaceRE "(<h[1-6]\\sid=\"([^\"]+)\"\\s?>)(.+)(</h[1-6]+>)" "${1}<a href=\"#${2}\">${3}</a>${4}" | safeHTML }} -->
+    <!-- {{ .Content | replaceRE "(<h[2-9] id=\"([^\"]+)\".+)(</h[2-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\">#</a> ${3}" | safeHTML }} -->
 
 		{{ partial "single/footer.html" . }}
 	</div>

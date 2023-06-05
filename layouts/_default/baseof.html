@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
 <head>
-    <!-- Load Relevant Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-     <!-- <link rel="preload" as="font" crossorigin="anonymous" type="font/otf" href="https://github.com/brongulus/tufte/blob/master/static/fonts/XCharter-Roman.otf?raw=true"> -->
-     <!-- <link rel="preload" as="font" crossorigin="anonymous" type="font/otf" href="https://github.com/brongulus/tufte/blob/master/static/fonts/XCharter-Italic.otf?raw=true"> -->
-
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Cormorant:ital,wght@0,400;1,300&family=Josefin+Sans:wght@200;300&family=Roboto+Mono:wght@300&family=Inter:wght@600&family=Source+Sans+Pro:wght@300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css">
-
-    <!-- Adobe -->
     <!-- <link rel="stylesheet" href="https://use.typekit.net/xqy2tkj.css"> -->
-    <!-- OS preferences based initial theme  -->
-    <script>
+    <script> // System preference
         function setTheme() {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.documentElement.setAttribute("data-theme", "dark");
@@ -27,18 +17,11 @@
       }
     </script>
     <script>
-        // Render blocking JS:
-        if (localStorage.theme) document.documentElement.setAttribute("data-theme", localStorage.theme);
+        if (localStorage.theme) document.documentElement.setAttribute("data-theme", localStorage.theme); // Blocking JS
     </script>
 </head>
 <body>
-    <!-- <div id ="dark-mode-button"> -->
-    <!-- <input type="checkbox" class="toggle" id="check"/> -->
         <div class="content">
-    <!--         <label class="label" for="check"> -->
-	<!-- 			<div class="ball"></div> -->
-	<!-- 		</label> -->
-    <!-- </div> -->
             <div class="custom-scrollbar">
                 <div class = "container">
                 {{ partial "head.html" . }}
@@ -48,8 +31,7 @@
                 </div>
             </div>
         </div>
-    <!-- Flash free dark mode switch -->
-    <script>
+    <script> // Flash free theme switch
         const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
         if (localStorage.theme) {
             toggleSwitch.checked = localStorage.theme === "dark";
@@ -59,7 +41,6 @@
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.theme = theme;
         }
-
         toggleSwitch.addEventListener("change", switchTheme);
     </script>
     </body>
