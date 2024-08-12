@@ -112,6 +112,7 @@ html {
     @media (max-width: 625px) {
         font-size: 20px;
     }
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
@@ -150,6 +151,10 @@ h2 {
     border-bottom: 2px solid var(--accent);
     margin-bottom: 1.4rem;
     font-size: 1.8rem;
+    @media (max-width: 625px) {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
     line-height: 1;
 }
 h3 {
@@ -387,7 +392,7 @@ table tr + tr {
 //-----------
 // Fonts
 //-----------
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&Nanum+Myeongjo&Noto+Serif+KR:wght@200&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300&Nanum+Myeongjo&Noto+Serif+KR:wght@200&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 @font-face {
     font-family: "Fira Sans";
     font-weight: 100;

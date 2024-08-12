@@ -74,8 +74,8 @@
         @media (max-width: 700px) {
             font-size: 1rem;
         }
-        @media (max-width: 425px) {
-            font-size: 15px;
+        @media (max-width: 625px) {
+            font-size: 16px;
         }
         line-height: 1.35em;
         margin-bottom: 0;
@@ -118,20 +118,20 @@
         }
 
         font-family: "Source Serif Pro", serif;
-        padding: 0.5em 2rem;
+        padding: 0.5em 1.5rem;
         margin-block-start: 1rem;
         margin-block-end: 1rem;
-        margin-inline-end: 2rem;
-        margin-inline-start: 2rem;
+        margin-inline-end: 1.5rem;
+        margin-inline-start: 1.5rem;
         margin: 0;
         text-align: left;
     }
 
     .epigraph .epicite p {
         border-top: none;
-        font-size: 1.1rem;
+        font-size: 1.0rem;
         @media (max-width: 625px) {
-            font-size: 16.8px;
+            font-size: 15.8px;
         }
         border-bottom: 3px double #727272;
         text-align: right;
@@ -148,7 +148,7 @@
             font-size: 2.6rem;
         }
         @media (max-width: 650px) {
-            font-size: 2.4rem;
+            font-size: 2.0rem;
         }
         margin-bottom: 1.5rem;
         margin-top: 0.25rem;
