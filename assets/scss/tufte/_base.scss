@@ -120,6 +120,8 @@ body {
     transition: background 0.8s ease-in-out, color 0.5s ease;
     background: var(--bg);
     // overflow: hidden;
+    overflow-y: auto;
+    height: 100vh;
     -webkit-text-size-adjust: 100%;
 }
 .container {
@@ -130,8 +132,7 @@ body {
         margin: 0 4rem;
         max-width: 1250px;
     }
-    overflow-y: auto;
-    height: 100vh;
+ 
     margin: 0 auto;
     max-width: 1000px;
     width: 95%;
