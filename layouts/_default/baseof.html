@@ -22,14 +22,14 @@
 </head>
 <body>
         <div class="content">
-            <div class="custom-scrollbar">
+            <!-- <div class="custom-scrollbar"> -->
                 <div class = "container">
                 {{ partial "head.html" . }}
                 {{ partial "header.html" . }}
                 {{ block "main" . }}{{ end }}
                 {{ partial "footer.html" . }}
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     <script> // Flash free theme switch
         const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');

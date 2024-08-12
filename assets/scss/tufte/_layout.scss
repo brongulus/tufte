@@ -2,9 +2,13 @@ footer,
 main,
 .nav-container {
     display: block;
+    font-weight: 300;
     margin: 0 auto;
     max-width: 1000px;
     width: 90%;
+    @media (max-width: 625px) {
+        width: 95%;
+    }
 }
 
 .nav {
@@ -62,13 +66,17 @@ main,
         display: inline-block;
         opacity: 0.6;
         padding: 0 1.2rem 0 0;
-        font-weight: 400;
         background: var(--gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
+        @media only screen and (max-width: 625px) {
+            padding: 0 0.7rem 0 0;
+            font-size: 90%;
+        }
         @media only screen and (max-width: 425px) {
-            padding: 0 0.9rem 0 0;
+            padding: 0 0.6rem 0 0;
+            font-size: 80%;
         }
 
         &:last-child {
@@ -87,6 +95,7 @@ main,
 
     li a {
         font-family: "Josefin Sans";
+        font-weight: 500;
         text-transform: uppercase;
     }
 }
@@ -128,7 +137,7 @@ footer {
         // Tufte
         float: right;
         clear: right;
-        margin-right: -55%;
+        margin-right: -50%;
         width: 40%;
         margin-top: 0.3rem;
         margin-bottom: 0;
@@ -175,13 +184,14 @@ footer {
     color: var(--accent);
     border-bottom: 1px solid var(--accent);
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 300;
     display: block;
     font-size: 105%;
-    padding-top: 2.1em;
-    margin-top: -1.65em;
+    padding-top: 2rem;
+    margin-top: -1.65rem;
     @media (max-width: 1480px) {
-        margin-left: -0.75em;
+        margin-left: -0.70rem;
+        width: 90%;
         // color: var(--head);
     }
     margin-left: -1em;
