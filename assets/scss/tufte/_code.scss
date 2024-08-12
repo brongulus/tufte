@@ -1,27 +1,25 @@
 pre,
 code {
-  font-family: "Victor Mono", monospace;
-  // font-family: "Roboto Mono", monospaced;
+    font-family: "Victor Mono", monospace;
 }
 
 code {
-  border-radius: 0px;
-  // color: $code-color;
-  color: var(--code);
-  // font-style: italic;
-  font-size: 100%;
-  // overflow-x: auto;
+    border-radius: 0px;
+    color: var(--code);
+    font-size: 100%;
+    font-weight: 500;
+    // overflow-x: auto;
 }
 
 // DONE
 pre {
-  // border-left: 3px solid var(--font);
-  // border-radius: 0.25rem;
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-  font-size: 18px;
-  margin: 0 0 1rem;
-  padding: 0.5rem;
+    // border-left: 3px solid var(--font);
+    // border-radius: 0.25rem;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    font-size: 18px;
+    margin: 0 0 1rem;
+    padding: 0.5rem;
 }
 
 .chroma .c1,
@@ -31,7 +29,7 @@ pre {
 .se,
 .k,
 .nf {
-  font-style: italic;
+    font-style: italic;
 }
 
 // .chroma .line {
@@ -45,51 +43,51 @@ pre {
 // }
 
 .highlight pre code:before {
-  // FIXME
-  // position: relative;
-  position: sticky;
-  // top: -2px;
-  left: 0px;
-  display: inline-flex;
-  padding: 0.25em 0.5em;
-  background: var(--font);
-  border-bottom-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-  border: 0;
-  color: var(--bg-sel);
-  font-size: 80%;
-  font-weight: 600;
+    // FIXME
+    // position: relative;
+    position: sticky;
+    // top: -2px;
+    left: 0px;
+    display: inline-flex;
+    padding: 0.25em 0.5em;
+    background: var(--font);
+    border-bottom-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border: 0;
+    color: var(--bg-sel);
+    font-size: 80%;
+    font-weight: 600;
 }
 
 pre code {
-  color: var(--font);
-  font-size: 100%;
-  font-style: normal;
-  margin-top: -1em;
-  // FIXME
-  // padding: 0.01rem;
+    color: var(--font);
+    font-size: 100%;
+    font-style: normal;
+    margin-top: -1em;
+    // FIXME
+    // padding: 0.01rem;
 }
 
 // DONE
 .highlight {
-  margin: 1rem 0;
-  pre {
-    margin-bottom: 0;
-    // padding: 0 0.5em;
-    overflow-x: auto;
-    // white-space: pre-wrap;
-  }
+    margin: 1rem 0;
+    pre {
+        margin-bottom: 0;
+        // padding: 0 0.5em;
+        overflow-x: auto;
+        // white-space: pre-wrap;
+    }
 }
 
 ::-webkit-scrollbar {
-  background-color: transparent;
-  width: 3px;
+    background-color: transparent;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  opacity: 0.6;
-  // border-radius: 6px;
-  border: 5px solid transparent;
-  background-clip: content-box;
+    background: var(--accent);
+    opacity: 0.6;
+    // border-radius: 6px;
+    border: 5px solid transparent;
+    background-clip: content-box;
 }

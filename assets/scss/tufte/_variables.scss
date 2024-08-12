@@ -11,22 +11,22 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 $code-color: #bf616a;
 
 // Fonts
-$serif-primary: "Mulish", "Source Sans Pro", "Inter", "Libre Baskerville",
-  "Times New Roman", Times, serif;
+$serif-primary: "Merriweather", "Source Sans Pro", "Inter", "Libre Baskerville",
+                "Times New Roman", Times, serif;
 $serif-secondary: Palatino, "Palatino LT STD", "Palatino Linotype",
-  "Book Antiqua", "Georgia", serif;
-$sans-serif: "Mulish", "Source Sans Pro", "Inter", "Helvetica Neue", "Segoe UI",
-  Helvetica, Arial, sans-serif;
+                  "Book Antiqua", "Georgia", serif;
+$sans-serif: "Merriweather", "Source Sans Pro", "Inter", "Helvetica Neue", "Segoe UI",
+             Helvetica, Arial, sans-serif;
 $monospaced: Menlo, Monaco, monospace;
 
 @mixin box-sizing($type: border-box) {
-  -webkit-box-sizing: $type;
-  -moz-box-sizing: $type;
-  box-sizing: $type;
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
 }
 
 @mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  transition: $args;
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    transition: $args;
 }
