@@ -31,7 +31,7 @@
         --gradient-sel: #64acff;
         --link: #88c0d0;
         --code: #ffffffcc;
-        --font: #ffffff;
+        --font: #f0f0f0;
         --head: #f2f5f7;
         --highlight: #617bff66;
         --blend: lighten;
@@ -48,7 +48,7 @@
     --bg-sel: #0e001c;
     --highlight: #617bff66;
     --link: #88c0d0;
-    --font: #ffffff;
+    --font: #f0f0f0;
     --head: #f2f5f7;
     --gradient-sel: #64acff;
     --code: #ffffffcc;
@@ -79,7 +79,7 @@
 }
 * {
     @include box-sizing;
-    line-height: 1.45;
+    line-height: 1.55;
     box-sizing: border-box;
     // -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;

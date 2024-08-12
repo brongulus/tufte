@@ -112,13 +112,11 @@
         white-space: pre;
         border-top: 3px double #727272;
         font-style: italic;
-        @media (max-width: 625px) {
-            font-size: 18px;
-        }
-        @media (max-width: 425px) {
-            font-size: 15px;
-        }
         font-size: 1.2em;
+        @media (max-width: 625px) {
+            font-size: 16.8px;
+        }
+
         font-family: "Source Serif Pro", serif;
         padding: 0.5em 2rem;
         margin-block-start: 1rem;
@@ -131,15 +129,12 @@
 
     .epigraph .epicite p {
         border-top: none;
+        font-size: 1.1rem;
         @media (max-width: 625px) {
-            font-size: 0.9rem;
-        }
-        @media (max-width: 425px) {
-            font-size: 15px;
+            font-size: 16.8px;
         }
         border-bottom: 3px double #727272;
         text-align: right;
-        font-size: 1.1rem;
         font-style: normal;
         margin-bottom: 1rem;
     }
@@ -171,7 +166,12 @@
     p {
         font-family: "Merriweather", sans-serif;
         font-weight: 300;
-        font-size: 1.0rem;
+
+        font-size: 1.0rem; // 16.8px
+        @media (max-width: 625px) {
+            font-size: 16.8px;
+        }
+
         margin: 0 0 1rem;
         text-align: left;
         white-space: pre-wrap;
@@ -181,7 +181,12 @@
 
     ol li {
         font-weight: 300;
-        font-size: 1.0rem;
+        
+        font-size: 1.0rem; // 16.8px
+        @media (max-width: 625px) {
+            font-size: 16.8px;
+        }
+
         margin-top: 0.35em;
         margin-bottom: 0.45em;
         line-height: 1.45;
@@ -189,7 +194,12 @@
 
     ul li {
         font-weight: 300;
-        font-size: 1.0rem;
+        
+        font-size: 1.0rem; // 16.8px
+        @media (max-width: 625px) {
+            font-size: 16.8px;
+        }
+
         margin-top: 0.35em;
         margin-bottom: 0.45em;
         line-height: 1.45;
