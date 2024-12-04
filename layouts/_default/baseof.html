@@ -31,6 +31,12 @@
                 </div>
             <!-- </div> -->
         </div>
+        {{ if .Store.Get "hasMermaid" }}
+        <script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          mermaid.initialize({ startOnLoad: true });
+        </script>
+        {{ end }}
     <script> // Flash free theme switch
         const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
         if (localStorage.theme) {
