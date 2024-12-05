@@ -83,27 +83,26 @@ pre code {
 }
 
 .mermaidbox {
+    // position: relative;
+    // white-space: nowrap;
+    // overflow-wrap: break-word;
     overflow: auto;   /* Enables scrolling */
-    max-width: 100%;  /* Responsive container */
 }
 
 pre.mermaid {
-    max-width: 100%;  /* Prevents overflow */
-    width: auto;      /* Allows natural scaling */
-    height: auto;     /* Prevents fixed height */
+    max-width: none !important;
     overflow-x: auto; /* Enables horizontal scrolling if needed */
-    overflow-y: hidden; /* Prevents vertical scroll unless necessary */
 }
 
 pre.mermaid svg[id^="m"][width][height][viewBox] {
     /* Ensure SVG can scale and be explored */
-    max-width: none;     /* Override any max-width restrictions */
-    min-width: 100%;     /* Ensure minimum width fills container */
-    height: auto;        /* Maintain aspect ratio */
+    max-width: none !important;
+    transform: none !important;
 }
 
 pre.mermaid p {
     font-family: initial;
+    font-size: 10px;
     line-height: 1.1;
 }
 
