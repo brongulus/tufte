@@ -1,6 +1,6 @@
 .catalogue {
   &-item {
-    border-bottom: 1px solid var(--accent);
+    border-top: 0.5px solid var(--accent);
     color: var(--font);
     display: block;
     padding: 1.5rem 0;
@@ -11,7 +11,8 @@
     }
 
     &:last-child {
-      border: 0;
+      border-top: 0.5px solid var(--accent);
+      // border: 0;
     }
   }
 
@@ -30,6 +31,7 @@
   }
 
   &-time {
+    margin-left: 2px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-align: left;

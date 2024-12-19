@@ -1,4 +1,7 @@
 .post {
+    border-top: 0.5px solid var(--accent);
+    // box-shadow: 0 -4px 4px -4px var(--accent);
+
     // p:first-child::first-letter {
     //   color: hotpink;
     //   padding: 0 0.3rem;
@@ -16,6 +19,7 @@
         color: $default-tint;
         font-family: $serif-secondary;
         letter-spacing: 0.5px;
+        margin-left: 5px;
         margin-top: 1rem;
         // text-align: center;
 
@@ -206,8 +210,9 @@
     }
     
     a:hover {
-        text-decoration: underline;
-    }
+        color: var(--bg);
+        background: var(--link);
+   }
 
     img {
         margin: 0 auto 0.5rem;

@@ -1,6 +1,7 @@
 pre,
 code {
     font-family: "Victor Mono", monospace;
+    overflow-x: auto;
 }
 
 code {
@@ -21,7 +22,7 @@ pre {
     @media (max-width: 650px) {
         font-size: 16px;
     }
-    margin: 0 0 1rem;
+    margin: 0.5rem 0;
     padding: 0.5rem;
 }
 
@@ -80,6 +81,12 @@ pre code {
         overflow-x: auto;
         // white-space: pre-wrap;
     }
+}
+
+pre.mermaid {
+    border-top: none;
+    border-bottom: none;
+
 }
 
 pre.mermaid p {
