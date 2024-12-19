@@ -13,7 +13,6 @@ main,
 
 .nav {
     display: block;
-    box-shadow: 0 2px 2px -2px var(--accent);
     overflow: auto;
 
     &-container {
@@ -172,7 +171,7 @@ footer {
         color: var(--accent);
 
         &:hover {
-            color: var(--bg-sel);
+            color: var(--bg);
             background: var(--link);
             text-decoration: none;
         }
@@ -182,18 +181,22 @@ footer {
     content: "Table of Contents";
     text-transform: uppercase;
     color: var(--accent);
-    border-bottom: 1px solid var(--accent);
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
     display: block;
     font-size: 105%;
     padding-top: 2rem;
     margin-top: -1.65rem;
-    @media (max-width: 1480px) {
-        margin-left: -0.70rem;
+    
+    // @media (max-width: 1480px) {
+    //     margin-left: -0.70rem;
+    //     width: 90%;
+    //     // color: var(--head);
+    // }
+    @media (min-width: 1480px) {
         width: 90%;
-        // color: var(--head);
     }
+    border-bottom: 1px solid var(--accent);
     margin-left: -1em;
 }
 #TableOfContents ul {
