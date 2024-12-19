@@ -82,30 +82,25 @@ pre code {
     }
 }
 
-.mermaidbox {
-    // position: relative;
-    // white-space: nowrap;
-    // overflow-wrap: break-word;
-    overflow: auto;   /* Enables scrolling */
-    text-align: center;
-}
-
-pre.mermaid {
-    max-width: none !important;
-    overflow-x: auto; /* Enables horizontal scrolling if needed */
-}
-
-pre.mermaid svg[id^="m"][width][height][viewBox] {
-    /* Ensure SVG can scale and be explored */
-    max-width: none !important;
-    transform: none !important;
-}
-
 pre.mermaid p {
     font-family: initial;
-    font-size: 10px;
+    // font-family: "Victor Mono", monospace;
+    font-size: 16px;
     line-height: 1.1;
 }
+
+// .post .mermaid p {
+//     all: unset; /* Remove inherited styles from .post p */
+// }
+
+// .post .mermaid p {
+//     // font-family: initial;
+//     font-family: "Victor Mono", monospace;
+//     // font-weight: 600;
+//     text-align: left;
+//     white-space: pre-wrap;
+//     font-size: 16px;
+// }
 
 ::-webkit-scrollbar {
     background-color: transparent;
