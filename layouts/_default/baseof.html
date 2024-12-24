@@ -41,10 +41,11 @@
         align:'{{ if site.Params.mermaid.align }}{{ site.Params.mermaid.align }}{{ else }}center{{ end }}',
     };
     mermaid.initialize(config);
-    // const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
-    // toggleSwitch.addEventListener('click', () => {
-    //     window.location.reload();
-    // });
+    // Reload the webpage so that the mermaid diagrams are updated with the change in theme
+    const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
+    toggleSwitch.addEventListener('click', () => {
+        window.location.reload();
+    });
 </script>
 {{ end }}
 <script> // Flash free theme switch
