@@ -33,20 +33,23 @@
     </div>
     {{ if .Store.Get "hasMermaid" }}
     <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-    var config = {
-        startOnLoad: true,
-        // FIXME
-        theme: (localStorage.getItem('theme') === 'dark') ? 'dark' : 'default',
-        align:'{{ if site.Params.mermaid.align }}{{ site.Params.mermaid.align }}{{ else }}center{{ end }}',
-    };
-    mermaid.initialize(config);
-    // Reload the webpage so that the mermaid diagrams are updated with the change in theme
-    const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
-    toggleSwitch.addEventListener('click', () => {
-        window.location.reload();
-    });
-</script>
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+      import elkLayouts from 'https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs';
+
+      mermaid.registerLayoutLoaders(elkLayouts);
+      var config = {
+          startOnLoad: true,
+          // FIXME
+          theme: (localStorage.getItem('theme') === 'dark') ? 'dark' : 'default',
+          align:'{{ if site.Params.mermaid.align }}{{ site.Params.mermaid.align }}{{ else }}center{{ end }}',
+      };
+      mermaid.initialize(config);
+      // Reload the webpage so that the mermaid diagrams are updated with the change in theme
+      const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
+      toggleSwitch.addEventListener('click', () => {
+          window.location.reload();
+      });
+    </script>
 {{ end }}
 <script> // Flash free theme switch
   const toggleSwitch = document.querySelector('#dark-mode-button input[type="checkbox"]');
